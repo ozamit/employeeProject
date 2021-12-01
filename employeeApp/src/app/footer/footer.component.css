@@ -1,0 +1,10 @@
+
+.social_icons_wraper {
+    display: flex;
+    align-items: center;
+}
+
+.socialicon {
+    width: 50px;
+    margin: 20px;
+}

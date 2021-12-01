@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
+import { EMPLOYEE } from '../list_employees';
+
 
 @Component({
   selector: 'app-employees',
@@ -8,20 +10,16 @@ import { Employee } from '../employee';
 })
 export class EmployeesComponent implements OnInit {
 
+  employees = EMPLOYEE;
+
+  selectedEmployee?: Employee;
+  onSelect(employee: Employee): void {
+  this.selectedEmployee = employee;
+}
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  employee: Employee = {
-    id: 318033743,
-    fname: 'Alex',
-    lname: 'Gorbachov'
-    };
-
-    employee1: Employee = {
-      id: 123456789,
-      fname: 'Amit',
-      lname: 'Oz'
-      };
-   
+  
 }

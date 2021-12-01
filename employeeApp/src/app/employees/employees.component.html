@@ -1,12 +1,46 @@
-<p>employees works!</p>
+
+<table class="employees">
+    <tr class="table_header">
+        <th>  </th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date of birth</th>
+        <th>Salary</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee"
+     (click)="onSelect(employee)" class="row">
+        <td>
+            <input type="checkbox">
+        </td>
+        <td class="id_class">{{employee.id}}</td>
+        <td class="name_class">{{employee.fname}} {{employee.lname}}</td> 
+        <td class="dob_class">{{employee.dob}}</td>
+        <td class="salary_class">{{employee.salary}}</td> 
+        <td class="email_class">{{employee.email}}</td>
+        <td>
+            <button class="deleteBtn">Delete</button>
+            <button class="detailsBtn">Details</button>
+        </td>
+        
+    </tr>
+</table>
 
 
-<h2>{{employee.fname}} Details</h2>
-<div><span>id: </span>{{employee.id}}</div>
-<div><span>First Name: </span>{{employee.fname}}</div>
-<div><span>Last Name: </span>{{employee.lname}}</div>
+<div class="selected_employee_details" *ngIf="selectedEmployee">  
+<h2>{{selectedEmployee.fname | uppercase}} {{selectedEmployee.lname | uppercase}} Details:</h2>
+  <div>
+    <label for="employee-fname">Employee first name: </label>
+    <input id="employee-fname" class="input_first_name" [(ngModel)]="selectedEmployee.fname" placeholder="first name">
+    <br>
+    <label for="employee-lname">Employee last name: </label>
+    <input id="employee-lname" class="input_last_name" [(ngModel)]="selectedEmployee.lname" placeholder="last name">
+    <br>
+    <label for="employee-lname">Employee Email: </label>
+    <input id="employee-lname" class="input_last_name" [(ngModel)]="selectedEmployee.email" placeholder="Email">
+  </div>
+  <div><span>ID: </span>{{selectedEmployee.id}}</div>
+  <div><span>Date of birth: </span>{{selectedEmployee.dob}}</div>
+  <div><span>Salary: </span>{{selectedEmployee.salary}}</div>
 
-<h2>{{employee1.fname | uppercase}} Details</h2>
-<div><span>id: </span>{{employee1.id}}</div>
-<div><span>First Name: </span>{{employee1.fname}}</div>
-<div><span>Last Name: </span>{{employee1.lname}}</div>
+</div>
