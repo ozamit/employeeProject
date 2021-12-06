@@ -1,9 +1,11 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-
-<div class="social_icons_wraper">
-    <div *ngFor="let socialicon of socialicons" >
-        <img class="socialicon" src={{socialicon.icon}}>
+<footer>
+    <div class="social_icons_wraper">
+        <div *ngFor="let socialicon of socialicons" >
+            <a href={{socialicon.url}} target="_blank"><img class="socialicon" src={{socialicon.icon}}></a>
+        </div>
+        <div>{{copyright}}</div>
     </div>
-    <div>{{copyright}}</div>
-</div>
+</footer>
+
+
 

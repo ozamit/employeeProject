@@ -1,110 +1,93 @@
-body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+.main_section {
+  display: flex;
+  font-size: 0.8em;
+  margin-bottom: 2em;
 }
 
-table {
-  width: 70%;
-  border: 0px;
-}
-
-table th {
-  padding-bottom: 10px;
-}
-
+/* all table */
 .employees {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    /* width: 15em; */
+  margin: 0 0 0 2em;
+  list-style-type: none;
+  padding: 0;
+  width: 60%;
+  border: 0px;
+  border-collapse: collapse;
   }
 
-  .employees tr {
-    cursor: pointer;
-     position: relative;
-   /* left: 0;
-    background-color: #EEE;
-    margin: 0.5em;
-    padding: 0.3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-    width: 18em; */
-  }
-  .row:hover {
-    color: #2c3a41;
-    background-color: #e6e6e6;
-    left: .1em;
-  }
-  .employees tr.selected {
-    background-color: rgb(97, 97, 97);;
-    color: white;
-  }
-  .employees tr.selected:hover {
-    background-color: #505050;
-    color: white;
-  }
-  .employees tr.selected:active {
-    background-color: rgb(97, 97, 97);
-    color: white;
-  }
-  .employees .id_class {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color:#405061;
-    line-height: 1em;
-    height: 1.8em;
-    border-radius: 4px;
-  }
-
-  .employees .dob_class {
-    text-align: center;
-  }
-  
-  .employees .salary_class {
-    text-align: center;
-  }
-  
-  input {
-    padding: .5rem;
-    margin: 0.3em;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0px 2px 12px -8px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-  }
-
-  .deleteBtn {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background-color: #DC3545;
+  table th {
+    padding-bottom: 10px;
+    cursor: auto;
+    background-color: black;
     color: #ffffff;
-    height: 30px;
-    width: 60px;
-    border: none;
-    border-radius: 5px;
-    margin: 0 0.2em;
   }
 
-  .detailsBtn {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background-color: #17A2B8;
-    color: #ffffff;
-    height: 30px;
-    width: 60px;
-    border: none;
-    border-radius: 5px;
-    margin: 0 0.2em;
+  tr:nth-child(even) {
+    background: rgb(221, 221, 221);
   }
 
-  .selected_employee_details {
-    background-color: cornsilk;    
-    padding: 3em;
-    padding-top: 1em;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    width: 65%;
+.employees tr {
+  cursor: pointer;
+  height: 35px
   }
 
-  span {
-    margin-left: 20px;
+.row:hover {
+  color: #000000;
+  font-weight: bold;
+  left: .1em;
+  }
+
+.employees tr.selected {
+  background-color: #01987A;
+  color: white;
+  }
+
+.employees tr.selected:hover {
+  background-color: #01987A;
+  color: #000000;
+  }
+
+.employees tr.selected:active {
+  background-color: #01987A;
+  color: #000000;
+  }
+
+.employees td {
+  text-align: center;
+  }
+
+.deleteBtn {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #DC3545;
+  color: #ffffff;
+  height: 30px;
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 0.2em;
+  }
+
+.detailsBtn {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #17A2B8;
+  color: #ffffff;
+  height: 30px;
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 0.2em;
+  }
+
+.selected_employee_details {
+  background-color: cornsilk;    
+  padding: 3em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 65%;
+  margin: 0 0 30px 0;
+  }
+
+span {
+  margin-left: 20px;
   }

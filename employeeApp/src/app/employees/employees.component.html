@@ -1,32 +1,37 @@
+<div class="main_section">
+    <table class="employees">
+        <tr class="table_header">
+            <th>Select</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date of birth</th>
+            <th>Salary</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee"
+         (click)="onSelect(employee)" class="row">
+            <td class="checkbox_class">
+                i<input type="checkbox">
+            </td>
+            <td class="id_class">{{employee.id}}</td>
+            <td class="name_class">{{employee.fname}} {{employee.lname}}</td> 
+            <td class="dob_class">{{employee.dob}}</td>
+            <td class="salary_class">{{employee.salary}}</td> 
+            <td class="email_class">{{employee.email}}</td>
+            <td>
+                <button class="deleteBtn">Delete</button>
+                <button class="detailsBtn">Details</button>
+            </td>
+            
+        </tr>
+    </table>
+    
+    <app-employee-detail [employee]="selectedEmployee"></app-employee-detail>
+</div>
 
-<table class="employees">
-    <tr class="table_header">
-        <th>  </th>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Date of birth</th>
-        <th>Salary</th>
-        <th>Email</th>
-    </tr>
-    <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee"
-     (click)="onSelect(employee)" class="row">
-        <td>
-            <input type="checkbox">
-        </td>
-        <td class="id_class">{{employee.id}}</td>
-        <td class="name_class">{{employee.fname}} {{employee.lname}}</td> 
-        <td class="dob_class">{{employee.dob}}</td>
-        <td class="salary_class">{{employee.salary}}</td> 
-        <td class="email_class">{{employee.email}}</td>
-        <td>
-            <button class="deleteBtn">Delete</button>
-            <button class="detailsBtn">Details</button>
-        </td>
-        
-    </tr>
-</table>
 
-
+<!-- 
 <div class="selected_employee_details" *ngIf="selectedEmployee">  
 <h2>{{selectedEmployee.fname | uppercase}} {{selectedEmployee.lname | uppercase}} Details:</h2>
   <div>
@@ -43,4 +48,4 @@
   <div><span>Date of birth: </span>{{selectedEmployee.dob}}</div>
   <div><span>Salary: </span>{{selectedEmployee.salary}}</div>
 
-</div>
+</div> -->

@@ -6,13 +6,15 @@ import { EmployeesComponent } from './employees/employees.component';
 
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    FooterComponent
+    FooterComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,

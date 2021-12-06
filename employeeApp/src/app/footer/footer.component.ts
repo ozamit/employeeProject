@@ -10,7 +10,7 @@ import { socialbtns } from '../list_socialbuttons';
 })
 export class FooterComponent implements OnInit {
 
-  copyright = "Copyright ©";
+  copyright = "Copyright © Amit Oz";
   socialicons = socialbtns;
 
   constructor() { }
