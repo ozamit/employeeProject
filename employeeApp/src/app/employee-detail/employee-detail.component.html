@@ -1,25 +1,32 @@
-<div class="selected_employee_details" *ngIf="employee">  
-    <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}} Details:</h2>
-      <div>
-        <br>
-        <label for="employee-id">ID: </label>
-        <input id="employee-id" class="input_id" [(ngModel)]="employee.id" placeholder="id" disabled>
-        <br>
-        <label for="employee-fname">First name: </label>
-        <input id="employee-fname" class="input_first_name" [(ngModel)]="employee.fname" placeholder="first name">
-        <br>
-        <label for="employee-lname">Last name: </label>
-        <input id="employee-lname" class="input_last_name" [(ngModel)]="employee.lname" placeholder="last name">
-        <br>
-        <label for="employee-dob">Date of birth: </label>
-        <input id="employee-dob" class="input_dob" [(ngModel)]="employee.dob" placeholder="Date of birth" disabled>
-        <br>
-        <label for="employee-lname">Email: </label>
-        <input id="employee-lname" class="input_last_name" [(ngModel)]="employee.email" placeholder="Email">
-        <br>
-        <label for="employee-salary">Salary: </label>
-        <input id="employee-salary" class="input_salary" [(ngModel)]="employee.salary" placeholder="salary">
-        
-      </div>
+
+<div class="employee_details_wrapper">
+    <div class="selected_employee_details" *ngIf="employee">
+        <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}} Details:</h2>
+          <div>
+            <br>
+            <label for="employee-id">ID: </label>
+            <input id="employee-id" class="input_id" [(ngModel)]="employee.id" placeholder="id" disabled>
+            <br>
+            <label for="employee-fname">First name: </label>
+            <input id="emploee-fname" class="input_first_name" [(ngModel)]="employee.fname" placeholder="first name">
+            <br>
+            <label for="employee-lname">Last name: </label>
+            <input id="emploee-lname" class="input_last_name" [(ngModel)]="employee.lname" placeholder="last name">
+            <br>
     
+            <label for="employee-dob">Date of birth: </label>
+            <input id="emploee-dob" class="input_dob" [(ngModel)]="employee.dob" placeholder="date of birth" disabled>
+            <br>
+    
+            <label for="employee-email">Email: </label>
+            <input id="emploee-email" class="input_email" [(ngModel)]="employee.email" placeholder="email">
+            <br>
+    
+            <label for="employee-salary">Salary: </label>
+            <input id="emploee-salary" class="input_salary" [(ngModel)]="employee.salary" placeholder="salary">
+            <br>
+            
+          </div>
+    </div>
 </div>
+

@@ -1,12 +1,23 @@
 
+footer{
+    margin-top: auto;
+}
 
-.social_icons_wraper {
+.social_icons_wrapper {
     background-color: rgb(203, 224, 243);
     width: 100%;
     bottom: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin: 0 30px;
+}
+
+.allsocialicons_wrapper {
+    display: flex;
 }
 
 .socialicon {

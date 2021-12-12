@@ -1,31 +1,31 @@
 <div class="main_section">
-    <table class="employees">
-        <tr class="table_header">
-            <th>Select</th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Date of birth</th>
-            <th>Salary</th>
-            <th>Email</th>
-            <th>Action</th>
-        </tr>
-        <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee"
-         (click)="onSelect(employee)" class="row">
-            <td class="checkbox_class">
-                i<input type="checkbox">
-            </td>
-            <td class="id_class">{{employee.id}}</td>
-            <td class="name_class">{{employee.fname}} {{employee.lname}}</td> 
-            <td class="dob_class">{{employee.dob}}</td>
-            <td class="salary_class">{{employee.salary}}</td> 
-            <td class="email_class">{{employee.email}}</td>
-            <td>
-                <button class="deleteBtn">Delete</button>
-                <button class="detailsBtn">Details</button>
-            </td>
-            
-        </tr>
-    </table>
+    <div class="table_wrapper">
+        <table class="employees">
+            <tr class="table_header">
+                <th></th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date of birth</th>
+                <th>Salary</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+            <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee"
+             (click)="onSelect(employee)" class="row">
+                <td class="checkbox_class"> <input type="checkbox" class="checkbox_class"> </td>
+                <td class="id_class">{{employee.id}}</td>
+                <td class="name_class">{{employee.fname}} {{employee.lname}}</td>
+                <td class="dob_class">{{employee.dob}}</td>
+                <td class="salary_class">{{employee.salary}}</td>
+                <td class="email_class">{{employee.email}}</td>
+                <td>
+                    <button class="deleteBtn">Delete</button>
+                    <button class="detailsBtn">Details</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
     
     <app-employee-detail [employee]="selectedEmployee"></app-employee-detail>
 </div>
