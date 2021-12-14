@@ -1,0 +1,13 @@
+
+.messages_section {
+    margin: 0 0 0 2em;
+}
+
+.message_title {
+    font-size: 30px;
+}
+
+.clear_btn {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+}
