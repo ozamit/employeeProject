@@ -8,10 +8,8 @@
 .table_wrapper {
   display: flex;
   width: 60%;
-  margin-left: 2em;
   padding: 8px;
   border-radius: 5px;
-  background: rgb(72,191,227);
   background: linear-gradient(90deg, rgba(72,191,227,1) 50%, rgba(128,255,219,1) 100%);
 }
 
@@ -50,7 +48,7 @@
   }
 
 .employees tr.selected {
-  background-color: rgb(1,152,122, 0);
+  background-color: #01987A;
   color: white;
   }
 

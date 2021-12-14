@@ -7,6 +7,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     AppComponent,
     EmployeesComponent,
     FooterComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

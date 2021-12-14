@@ -4,8 +4,7 @@
     margin-left: 2em;
     padding: 8px;
     border-radius: 5px;
-    background: rgb(72,191,227);
-  background: linear-gradient(90deg, rgba(72,191,227,1) 50%, rgba(128,255,219,1) 100%);
+    background: linear-gradient(90deg, rgba(72,191,227,1) 50%, rgba(128,255,219,1) 100%);
   }
 
   .selected_employee_details {
