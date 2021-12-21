@@ -1,9 +1,14 @@
 <div class="messages_section">
-    <div *ngIf="messageService.messages.length">
+    <div *ngIf="messageService.messages.length else elseBlock">
 
         <h2 class="message_title">Messages:</h2>
         <button class="clear_btn" (click)="messageService.clear()">Clear</button>
         <div *ngFor="let message of messageService.messages"> {{message}} </div>
+
     </div>
+    <ng-template #elseBlock>
+        <h2 class="message_title">Messages</h2>
+        <div>No new messages</div>
+    </ng-template>
     <br>
 </div>

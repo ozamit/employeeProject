@@ -1,8 +1,15 @@
 <!-- <h1>{{title}}</h1> -->
 
 <html>
+    <nav>
+        <a routerLink="/home">Home ||</a>
+        <a routerLink="/employees">List of employees ||</a>
+        <a routerLink="/employees2">List of employees2 ||</a>
+        <a routerLink="/dashboard">Dashboard</a>
+    </nav>
 
-    <app-employees></app-employees>
+    <router-outlet></router-outlet>
+    
     <app-messages></app-messages>
     <app-footer></app-footer>
 

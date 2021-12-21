@@ -12,15 +12,15 @@
             </tr>
             <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee"
              (click)="onSelect(employee)" class="row">
-                <td class="checkbox_class"> <input type="checkbox" class="checkbox_class"> </td>
+                <td class="checkbox_class" routerLink="/detail/{{employee.id}}"> <input type="checkbox" class="checkbox_class"> </td>
                 <td class="id_class">{{employee.id}}</td>
                 <td class="name_class">{{employee.fname}} {{employee.lname}}</td>
                 <td class="dob_class">{{employee.dob}}</td>
                 <td class="salary_class">{{employee.salary}}</td>
                 <td class="email_class">{{employee.email}}</td>
                 <td>
-                    <button  class="deleteBtn">Delete ⤬</button>
-                    <button  class="detailsBtn" routerLink="/detail/{{employee.id}}">Details 🗗</button>
+                    <button  class="deleteBtn">Delete</button>
+                    <button  class="detailsBtn">Details</button>
                 </td>
            </tr>
         </table>
@@ -29,3 +29,10 @@
     
     <app-employee-detail [employee]="selectedEmployee"></app-employee-detail>
 </div>
+
+<div class="second_section">
+    <app-sendmail [employee]="selectedEmployee"></app-sendmail>
+</div>
+
+
+<!-- routerLink="/detail/{{employee.id}}" -->

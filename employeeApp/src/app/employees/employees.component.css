@@ -1,13 +1,14 @@
-.main_section {
+.first_section {
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-around;
   font-size: 0.8em;
   margin-bottom: 2em;
 }
 
 .table_wrapper {
   display: flex;
-  width: 60%;
+  width: 55em;
   padding: 8px;
   border-radius: 5px;
   background: linear-gradient(90deg, rgba(72,191,227,1) 50%, rgba(128,255,219,1) 100%);
@@ -67,7 +68,7 @@
   }
 
 .checkbox_class {
-  margin-left: 20px;
+  margin-left: 10px;
   }
 
 .deleteBtn {
@@ -75,7 +76,7 @@
   background-color: #DC3545;
   color: #ffffff;
   height: 30px;
-  width: 60px;
+  width: 70px;
   border: none;
   border-radius: 5px;
   margin: 0 0.2em;
@@ -86,10 +87,10 @@
   background-color: #17A2B8;
   color: #ffffff;
   height: 30px;
-  width: 60px;
+  width: 70px;
   border: none;
   border-radius: 5px;
-  margin: 0 0.2em;
+  cursor: pointer;
   }
 
 .selected_employee_details {
@@ -101,8 +102,16 @@
   border-radius: 20px;
   width: 65%;
   margin: 0 0 30px 0;
+  cursor: pointer;
   }
 
 span {
   margin-left: 20px;
+  }
+
+  .second_section {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.8em;
+    margin: 0 5em 2em 0;
   }

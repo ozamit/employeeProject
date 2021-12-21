@@ -3,7 +3,8 @@ import { Employee } from '../employee';
 // import { EMPLOYEE } from '../list_employees';
 import { EmployeeService } from '../employee.service';
 import { MessageService } from '../message.service';
-
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-employees',
@@ -12,17 +13,20 @@ import { MessageService } from '../message.service';
 })
 export class EmployeesComponent implements OnInit {
 
-  // employees = EMPLOYEE;
-  employees: Employee[] = [];
+employees: Employee[] = [];
 
-
-  selectedEmployee?: Employee;
-  onSelect(employee: Employee): void {
-  this.selectedEmployee = employee;
+selectedEmployee?: Employee;
+onSelect(employee: Employee): void {
+this.selectedEmployee = employee;
 this.messageService.add(`Employee Component: Selected employee id=${employee.id}`);
 }
 
-  constructor(private employeeService: EmployeeService, private messageService: MessageService) { }
+  constructor(
+    private employeeService: EmployeeService,
+    private messageService: MessageService,
+    private route: ActivatedRoute,
+    private location: Location) { }
+
   getEmployees(): void {
   this.employeeService.getEmployees()
  .subscribe(employees => this.employees = employees);

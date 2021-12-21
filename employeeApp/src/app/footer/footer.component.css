@@ -13,14 +13,16 @@ footer{
 }
 
 .copyright {
-    margin: 0 30px;
+    margin: 0 20px;
+    font-size: 13px;
 }
 
 .allsocialicons_wrapper {
     display: flex;
+    align-items: center;
 }
 
 .socialicon {
-    width: 30px;
-    margin: 20px;
+    width: 25px;
+    margin: 5px 15px 5px 15px;
 }

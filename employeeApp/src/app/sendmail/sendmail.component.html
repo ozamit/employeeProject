@@ -1,0 +1,20 @@
+<div class="send_mail_wrapper" *ngIf="OpenSendmailBoxService.open_sendmail_box_action">
+    <div class="send_mail_box">
+        <h2 *ngIf="employee">send mail to {{employee.fname}} {{employee.lname}}</h2>
+
+        <label for="mail_to">Mail to: </label>
+        <input id="mail_to" class="mail_to" placeholder="to">
+        <br>
+        <label for="mail_cc">cc: </label>
+        <input id="mail_cc" class="mail_cc" placeholder="cc">
+        <br>
+        <label for="mail_subject">subject: </label>
+        <input id="mail_subject" class="mail_subject" placeholder="subject">
+        <br>
+        <label for="mail_massege">massege: </label>
+        <textarea id="mail_massege" class="mail_massege" placeholder="massege"></textarea>
+        <br>
+        <button type="button" class="send_btn" let sendclicked="send_mail_clicked"
+        (click)="sendmail()">Send</button>
+    </div>
+</div>

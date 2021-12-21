@@ -1,32 +1,40 @@
-
-<div class="employee_details_wrapper">
-    <div class="selected_employee_details" *ngIf="employee">
-        <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}} Details:</h2>
-          <div>
-            <br>
-            <label for="employee-id">ID: </label>
-            <input id="employee-id" class="input_id" [(ngModel)]="employee.id" placeholder="id" disabled>
-            <br>
-            <label for="employee-fname">First name: </label>
-            <input id="emploee-fname" class="input_first_name" [(ngModel)]="employee.fname" placeholder="first name">
-            <br>
-            <label for="employee-lname">Last name: </label>
-            <input id="emploee-lname" class="input_last_name" [(ngModel)]="employee.lname" placeholder="last name">
-            <br>
-    
-            <label for="employee-dob">Date of birth: </label>
-            <input id="emploee-dob" class="input_dob" [(ngModel)]="employee.dob" placeholder="date of birth" disabled>
-            <br>
-    
-            <label for="employee-email">Email: </label>
-            <input id="emploee-email" class="input_email" [(ngModel)]="employee.email" placeholder="email">
-            <br>
-    
-            <label for="employee-salary">Salary: </label>
-            <input id="emploee-salary" class="input_salary" [(ngModel)]="employee.salary" placeholder="salary">
-            <br>
-            
-          </div>
+<div class="employee_details_first_section">
+    <div class="employee_details_wrapper" *ngIf="employee">
+        <div class="selected_employee_details">
+            <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}} Details:</h2>
+             <div>
+                <br>
+                <label for="employee-id">ID: </label>
+                <input id="employee-id" class="input_id" [(ngModel)]="employee.id" placeholder="id" disabled>
+                <br>
+                <label for="employee-fname">First name: </label>
+                <input id="emploee-fname" class="input_first_name" [(ngModel)]="employee.fname" placeholder="first name">
+                <br>
+                <label for="employee-lname">Last name: </label>
+                <input id="emploee-lname" class="input_last_name" [(ngModel)]="employee.lname" placeholder="last name">
+                <br>
+                <label for="employee-dob">Date of birth: </label>
+                <input id="emploee-dob" class="input_dob" [(ngModel)]="employee.dob" placeholder="date of birth" disabled>
+                <br>
+                <label for="employee-salary">Salary: </label>
+                <input id="emploee-salary" class="input_salary" [(ngModel)]="employee.salary" placeholder="salary">
+                <br>
+        
+                <label for="employee-email">Email: </label><br>
+                <div>
+                    <input id="emploee-email" class="input_email" [(ngModel)]="employee.email" placeholder="email">
+                    <button type="button" class="send_mail_btn"
+                    let open_sendmail_box="open_sendmail_box" (click)="open_sendmail_func(open_sendmail_box)">send mail</button>
+                </div>
+                <br>
+             </div>
+        </div>
     </div>
-</div>
+    <div class="second_section">
+        <app-sendmail [employee]="employee"></app-sendmail>
+    </div>
 
+</div>
+<div *ngIf="href.includes('detail')">
+    <button class="back_btn" (click)="goBack()">Go back</button>
+</div>
