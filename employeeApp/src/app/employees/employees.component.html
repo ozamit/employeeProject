@@ -1,3 +1,5 @@
+<app-employee-search></app-employee-search>
+
 <div class="first_section">
     <div class="table_wrapper">
         <table class="employees">
@@ -19,7 +21,7 @@
                 <td class="salary_class">{{employee.salary}}</td>
                 <td class="email_class">{{employee.email}}</td>
                 <td>
-                    <button  class="deleteBtn">Delete ⤬</button>
+                    <button  class="deleteBtn" (click)="delete(employee)">Delete ⤬</button>
                     <button  class="detailsBtn" routerLink="/detail/{{employee.id}}">Details 🗗</button>
                 </td>
            </tr>
@@ -29,3 +31,10 @@
     
     <app-employee-detail [employee]="selectedEmployee"></app-employee-detail>
 </div>
+
+<div class="add_new_employee">
+    <label for="new-employee">Add new employee (first name)</label>
+    <input id="new-employee" #employeeName />
+    <button class="add-button" (click)="add(employeeName.value); employeeName.value=''">Add Employee</button>
+</div>
+

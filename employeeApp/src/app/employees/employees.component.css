@@ -115,3 +115,35 @@ span {
     font-size: 0.8em;
     margin: 0 5em 2em 0;
   }
+
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    }
+
+    input {
+    padding: .5rem;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    display: block;
+    }
+
+    .add_new_employee {
+      margin: 0 0 0 10px;
+    }
+
+    .add-button {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      margin: 5px 0 0 0;
+      background-color: #17A2B8;
+      color: #ffffff;
+      height: 30px;
+      width: 150px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }

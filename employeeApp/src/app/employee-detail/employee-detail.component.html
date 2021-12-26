@@ -14,7 +14,7 @@
                 <input id="emploee-lname" class="input_last_name" [(ngModel)]="employee.lname" placeholder="last name">
                 <br>
                 <label for="employee-dob">Date of birth: </label>
-                <input id="emploee-dob" class="input_dob" [(ngModel)]="employee.dob" placeholder="date of birth" disabled>
+                <input id="emploee-dob" class="input_dob" [(ngModel)]="employee.dob" placeholder="date of birth">
                 <br>
                 <label for="employee-salary">Salary: </label>
                 <input id="emploee-salary" class="input_salary" [(ngModel)]="employee.salary" placeholder="salary">
@@ -36,5 +36,6 @@
 
 </div>
 <div *ngIf="href.includes('detail')">
+    <button class="back_btn" (click)="save()">Save</button>
     <button class="back_btn" (click)="goBack()">Go back</button>
 </div>

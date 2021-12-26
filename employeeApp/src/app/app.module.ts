@@ -14,6 +14,7 @@ import { EmployeeRoutingComponent } from './employee-routing/employee-routing.co
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { EmployeeSearchComponent } from './employee-search/employee-search.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     MessagesComponent,
     DashboardComponent,
     SendmailComponent,
-    EmployeeRoutingComponent
+    EmployeeRoutingComponent,
+    EmployeeSearchComponent
   ],
   imports: [
     BrowserModule,
