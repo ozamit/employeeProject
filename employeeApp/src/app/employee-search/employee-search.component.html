@@ -1,14 +1,17 @@
 
 <div class="search-component" id="search-component">
     <label for="search-box">Search Employee</label>
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-   
+    <input #searchBox id="search-box" (input)="search(searchBox.value,searchterm.value)" />
+    <select #searchterm id="searchTerm">
+        <option *ngFor="let term of searchTerm" [value]="term">{{term}}</option>
+    </select>
+
     <ul class="search-result">
     <li *ngFor="let employee of employees$ | async" >
     <a routerLink="/detail/{{employee.id}}">
     {{employee.fname}} {{employee.lname}}
-
     </a>
     </li>
     </ul>
+
     </div>
